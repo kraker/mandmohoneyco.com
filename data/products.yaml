@@ -1,0 +1,71 @@
+categories:
+  - name: "Honey"
+    description: "100% raw & unfiltered, straight from our hives"
+    items:
+      - name: "Raw Amber Honey"
+        size: "1 lb (16 oz)"
+        price: 14
+        description: "Pure, raw, and unfiltered honey harvested from our own hives in Tulsa, Oklahoma."
+      - name: "Raw Amber Honey"
+        size: "8 oz"
+        price: 7
+        description: "Pure, raw, and unfiltered honey harvested from our own hives in Tulsa, Oklahoma."
+      - name: "Creamed Honey"
+        size: "4 oz"
+        price: 6
+        flavors:
+          - Lemon
+          - Chai
+          - Habanero
+          - Pumpkin Spice
+        description: "Smooth, spreadable creamed honey in a variety of flavors."
+
+  - name: "Beeswax Candles"
+    description: "Hand-poured 100% beeswax candles"
+    items:
+      - name: "Jar Candle"
+        size: "7.5 oz"
+        price: 20
+        scents:
+          - Unscented
+          - Lavender
+          - Comfortable Zen
+          - Woodsy
+          - Fresh
+        description: "100% beeswax candles, hand-poured with love and care."
+      - name: "Votive Candle"
+        size: ""
+        price: 4
+        description: "Small beeswax votive candles."
+      - name: "Taper Candles"
+        size: "pair"
+        price: 10
+        description: "Hand-dipped beeswax taper candles, sold as a pair."
+
+  - name: "Body Care"
+    description: "Beeswax-based skin care, handcrafted with natural ingredients"
+    items:
+      - name: "Hand Salve"
+        size: "2 oz"
+        price: 15
+        scents:
+          - Unscented
+          - Dreamy
+          - Woodsy
+        description: "A blend of beeswax and organic cold-pressed jojoba and argan oils. Gentle enough for faces, strong enough for rough hands."
+      - name: "Lotion"
+        size: "3 oz"
+        price: 20
+        description: "Rich beeswax lotion with natural oils and botanicals."
+      - name: "Beard Balm"
+        size: "2 oz tin"
+        price: 12
+        description: "Conditioning beard balm with beeswax and nourishing oils."
+
+  - name: "Home"
+    description: "Beeswax products for around the house"
+    items:
+      - name: "Cutting Board Butter"
+        size: "2 oz"
+        price: 5
+        description: "A blend of beeswax and mineral oil to extend the lifetime of wood and bamboo cutting boards and utensils."

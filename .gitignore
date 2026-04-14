@@ -1,0 +1,24 @@
+# Hugo build output
+public/
+resources/_gen/
+
+# Hugo build lock
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Large binary source files (kept locally as reference)
+*.pptx
+*.xlsx
+*.zip
+
+# Stray extraction artifacts
+--1_1.png
+-.xml

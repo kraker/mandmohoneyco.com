@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="page products-page">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <img src="/images/beehives.png" alt="" class="page-beehives" aria-hidden="true">
+    {{ .Content }}
+
+    {{ range .Site.Data.products.categories }}
+    <div class="product-category">
+      <h2>{{ .name }}</h2>
+      <p class="category-desc">{{ .description }}</p>
+      <div class="product-grid">
+        {{ range .items }}
+        {{ partial "product-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,28 @@
+<div class="product-card">
+  <h3>{{ .name }}</h3>
+  {{ with .size }}<p class="product-size">{{ . }}</p>{{ end }}
+  <p class="product-price">
+    {{ if .price }}
+      ${{ .price }}
+    {{ else }}
+      <em>Contact for pricing</em>
+    {{ end }}
+  </p>
+  {{ with .description }}<p class="product-desc">{{ . }}</p>{{ end }}
+  {{ with .scents }}
+  <div class="product-scents">
+    <strong>Available scents:</strong>
+    <ul>
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  {{ with .flavors }}
+  <div class="product-scents">
+    <strong>Flavors:</strong>
+    <ul>
+      {{ range . }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</div>

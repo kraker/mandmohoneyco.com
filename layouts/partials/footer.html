@@ -1,0 +1,20 @@
+<footer class="site-footer">
+  <div class="container">
+    <p class="tagline">{{ .Site.Params.tagline }}</p>
+    <p>{{ .Site.Params.phone }} &middot; {{ .Site.Params.address }}</p>
+    <p>&copy; {{ now.Year }} {{ .Site.Title }} All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.querySelector('.nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
