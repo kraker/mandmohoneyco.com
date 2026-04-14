@@ -2,7 +2,7 @@
 <section class="page">
   <div class="container">
     <h1>{{ .Title }}</h1>
-    <img src="/images/beehives.png" alt="" class="page-beehives" aria-hidden="true">
+    <img src="{{ "images/beehives.png" | relURL }}" alt="" class="page-beehives" aria-hidden="true">
     {{ .Content }}
   </div>
 </section>
