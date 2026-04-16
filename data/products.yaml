@@ -2,70 +2,134 @@ categories:
   - name: "Honey"
     description: "100% raw & unfiltered, straight from our hives"
     items:
-      - name: "Raw Amber Honey"
-        size: "1 lb (16 oz)"
-        price: 14
-        description: "Pure, raw, and unfiltered honey harvested from our own hives in Tulsa, Oklahoma."
-      - name: "Raw Amber Honey"
-        size: "8 oz"
-        price: 7
-        description: "Pure, raw, and unfiltered honey harvested from our own hives in Tulsa, Oklahoma."
+      - name: "Raw Unfiltered Honey"
+        description: "Pure, raw, and unfiltered honey from our hives in Tulsa."
+        sizes:
+          - label: "1 lb (16 oz)"
+            price: 15
+          - label: "8 oz"
+            price: 8
       - name: "Creamed Honey"
-        size: "4 oz"
-        price: 6
+        description: >-
+          Not dairy! Creamed honey is 100% raw honey with carefully controlled
+          crystallization, producing a smooth, spreadable texture like soft
+          butter. Spoon it onto toast, biscuits, or fruit.
+        sizes:
+          - label: "4 oz"
+            price: 6
+          - label: "1/2 lb (8 oz)"
+            price: 12
+          - label: "1 lb (16 oz)"
+            price: 24
         flavors:
-          - Lemon
-          - Chai
-          - Habanero
-          - Pumpkin Spice
-        description: "Smooth, spreadable creamed honey in a variety of flavors."
+          - name: "Plain"
+            description: "Pure creamed honey with no additional flavors."
+          - name: "Lemon"
+            description: "Organic freeze-dried lemon powder."
+          - name: "Chai"
+            description: >-
+              Traditional Masala Chai: black tea, cinnamon, cardamom,
+              ginger, nutmeg, cloves.
+          - name: "Hot"
+            description: "Organic ancho habanero added for a spicy kick."
+          - name: "Pumpkin Spice"
+            description: "Clove, cinnamon, ginger, nutmeg, allspice, and mace."
 
   - name: "Beeswax Candles"
     description: "Hand-poured 100% beeswax candles"
     items:
       - name: "Jar Candle"
-        size: "7.5 oz"
-        price: 20
+        description: "100% beeswax candles, hand-poured into amber glass jars."
+        sizes:
+          - label: "7.5 oz"
+            price: 20
         scents:
-          - Unscented
-          - Lavender
-          - Comfortable Zen
-          - Woodsy
-          - Fresh
-        description: "100% beeswax candles, hand-poured with love and care."
+          - name: "Unscented"
+            description: "No essential oils added."
+          - name: "Lavender"
+            description: "Organic lavender essential oil to help relax the day away."
+          - name: "Comfortable Zen"
+            description: >-
+              Organic ylang ylang, sweet orange, and patchouli essential
+              oils. A light and pleasant scent.
+          - name: "Woodsy"
+            description: >-
+              Cedarwood, cypress, myrrh, and fir essential oils. A breath
+              of fresh air.
+          - name: "Fresh and Bright"
+            description: >-
+              Organic lavender, rosemary, and frankincense essential oils.
+              Bright and energetic.
       - name: "Votive Candle"
-        size: ""
-        price: 4
-        description: "Small beeswax votive candles."
+        description: "Small hand-poured 100% beeswax votive candles."
+        sizes:
+          - label: ""
+            price: 4
       - name: "Taper Candles"
-        size: "pair"
-        price: 10
-        description: "Hand-dipped beeswax taper candles, sold as a pair."
+        description: "Hand-dipped 100% beeswax taper candles, sold as a pair."
+        sizes:
+          - label: "pair"
+            price: 10
 
   - name: "Body Care"
     description: "Beeswax-based skin care, handcrafted with natural ingredients"
     items:
       - name: "Hand Salve"
-        size: "2 oz"
-        price: 15
+        description: >-
+          A blend of beeswax and organic cold-pressed jojoba and argan oils.
+          Gentle enough for faces, strong enough for rough hands.
+        sizes:
+          - label: "2 oz"
+            price: 15
         scents:
-          - Unscented
-          - Dreamy
-          - Woodsy
-        description: "A blend of beeswax and organic cold-pressed jojoba and argan oils. Gentle enough for faces, strong enough for rough hands."
+          - name: "Unscented"
+            description: "No essential oils added."
+          - name: "Dreamy"
+            description: "Organic ylang ylang and sandalwood essential oils."
+          - name: "Woodsy"
+            description: >-
+              Organic cedarwood, cypress, and fir essential oils. A breath
+              of fresh air.
       - name: "Lotion"
-        size: "3 oz"
-        price: 20
-        description: "Rich beeswax lotion with natural oils and botanicals."
+        description: >-
+          Rich beeswax lotion with shea, argan, jojoba, apricot, and castor
+          oils, rose water, aloe, chamomile, and elderberry.
+        sizes:
+          - label: "3 oz"
+            price: 20
       - name: "Beard Balm"
-        size: "2 oz tin"
-        price: 12
-        description: "Conditioning beard balm with beeswax and nourishing oils."
+        description: >-
+          A blend of beeswax and organic cold-pressed jojoba, apricot
+          kernel, castor, and argan oils. Moisturizes even the most rugged
+          of faces and facial hair.
+        sizes:
+          - label: "2 oz tin"
+            price: 12
+      - name: "Beard Oil"
+        description: "Organic cold-pressed oil blend, finished with vitamin E."
+        sizes:
+          - label: "1 oz (30 ml)"
+            # price TBD — leaving blank intentionally so card shows "Contact for pricing"
+      # Facial Serum line is still in development — keep structure here for when it launches.
+      # - name: "Facial Serum"
+      #   description: "Lightweight facial serums for daily hydration."
+      #   sizes:
+      #     - label: "1 oz (30 ml)"
+      #   scents:
+      #     - name: "Hyaluronic Acid in Rose Water"
+      #       description: "Rose water, vitamin E, and hyaluronic acid."
+      #     - name: "Frankincense Oil"
+      #       description: >-
+      #         Frankincense-infused organic cold-pressed jojoba, argan,
+      #         and castor oils with vitamin E.
 
   - name: "Home"
     description: "Beeswax products for around the house"
     items:
       - name: "Cutting Board Butter"
-        size: "2 oz"
-        price: 5
-        description: "A blend of beeswax and mineral oil to extend the lifetime of wood and bamboo cutting boards and utensils."
+        description: >-
+          A blend of beeswax and mineral oil to extend the lifetime of wood
+          and bamboo cutting boards and utensils.
+        sizes:
+          - label: "2 oz"
+            price: 5

@@ -1,28 +1,62 @@
-<div class="product-card">
+{{ $wide := or .scents .flavors }}
+<div class="product-card{{ if $wide }} product-card--wide{{ end }}">
   <h3>{{ .name }}</h3>
-  {{ with .size }}<p class="product-size">{{ . }}</p>{{ end }}
-  <p class="product-price">
-    {{ if .price }}
-      ${{ .price }}
-    {{ else }}
-      <em>Contact for pricing</em>
+  <div class="product-card-body">
+    <div class="product-card-main">
+      {{ with .description }}<p class="product-desc">{{ . }}</p>{{ end }}
+
+      {{ with .sizes }}
+        {{ if eq (len .) 1 }}
+          {{ $s := index . 0 }}
+          {{ with $s.label }}<p class="product-size">{{ . }}</p>{{ end }}
+          <p class="product-price">
+            {{ if $s.price }}${{ $s.price }}{{ else }}<em>Contact for pricing</em>{{ end }}
+          </p>
+        {{ else }}
+          <ul class="product-sizes">
+            {{ range . }}
+              <li>
+                <span class="size-label">{{ .label }}</span>
+                <span class="size-price">
+                  {{ if .price }}${{ .price }}{{ else }}<em>Contact for pricing</em>{{ end }}
+                </span>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    {{ if $wide }}
+    <div class="product-card-aside">
+      {{ with .scents }}
+        <div class="product-variants">
+          <strong>Available scents:</strong>
+          <ul>
+            {{ range . }}
+              <li>
+                <span class="variant-name">{{ .name }}</span>
+                {{ with .description }}<span class="variant-desc">{{ . }}</span>{{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+
+      {{ with .flavors }}
+        <div class="product-variants">
+          <strong>Flavors:</strong>
+          <ul>
+            {{ range . }}
+              <li>
+                <span class="variant-name">{{ .name }}</span>
+                {{ with .description }}<span class="variant-desc">{{ . }}</span>{{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
     {{ end }}
-  </p>
-  {{ with .description }}<p class="product-desc">{{ . }}</p>{{ end }}
-  {{ with .scents }}
-  <div class="product-scents">
-    <strong>Available scents:</strong>
-    <ul>
-      {{ range . }}<li>{{ . }}</li>{{ end }}
-    </ul>
   </div>
-  {{ end }}
-  {{ with .flavors }}
-  <div class="product-scents">
-    <strong>Flavors:</strong>
-    <ul>
-      {{ range . }}<li>{{ . }}</li>{{ end }}
-    </ul>
-  </div>
-  {{ end }}
 </div>

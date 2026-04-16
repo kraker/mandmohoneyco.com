@@ -283,6 +283,30 @@ a:hover {
   padding: var(--space-md);
 }
 
+/* Wide product cards (have scents or flavors) span the full row and
+   split their body into a description/sizes column + a variants column */
+.product-card--wide {
+  grid-column: 1 / -1;
+}
+
+.product-card-body { display: block; }
+
+.product-card--wide .product-card-body {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.product-card--wide .product-variants { margin-top: 0; }
+.product-card--wide .product-variants + .product-variants { margin-top: var(--space-sm); }
+
+@media (max-width: 700px) {
+  .product-card--wide .product-card-body {
+    grid-template-columns: 1fr;
+  }
+}
+
 .product-size {
   font-size: 0.9rem;
   color: #666;
@@ -300,20 +324,58 @@ a:hover {
   font-size: 0.95rem;
 }
 
-.product-scents ul {
+/* Multi-size price list */
+.product-sizes {
   list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-xs);
+}
+.product-sizes li {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed var(--color-tan);
+}
+.product-sizes li:last-child { border-bottom: none; }
+.product-sizes .size-label { font-size: 0.9rem; color: #666; }
+.product-sizes .size-price { font-weight: 700; color: var(--color-gold); }
+
+/* Scent / flavor variants with inline makeup descriptions */
+.product-variants { margin-top: var(--space-sm); }
+.product-variants ul {
+  list-style: none;
   padding: 0;
   margin-top: var(--space-xs);
 }
-
-.product-scents li {
-  background-color: var(--color-cream);
-  padding: 0.25rem 0.75rem;
-  font-size: 0.875rem;
+.product-variants li {
+  padding: 0.4rem 0;
+  border-top: 1px dashed var(--color-tan);
 }
+.product-variants li:first-child { border-top: none; }
+.product-variants .variant-name {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+}
+.product-variants .variant-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-blue-gray);
+  line-height: 1.4;
+}
+
+/* Contact page mailto action buttons */
+.contact-options {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+.contact-options li { margin: 0; }
 
 /* ============================================
    Footer
